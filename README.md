@@ -21,7 +21,8 @@ sudo apt-get install p7zip-full
 ```
 __Stažení scriptu__
 ```sh
-příkaz doplním
+git clone https://github.com/DJIronic/mega-ts-backuup.git
+cd mega-ts-backuup
 ```
 __Udělení práv k běhu:__
 ```sh
@@ -56,7 +57,8 @@ sudo apt-get install p7zip-full
 ```
 __download script__
 ```sh
-I will ad the command here
+git clone https://github.com/DJIronic/mega-ts-backuup.git
+cd mega-ts-backuup
 ```
 __give it permissions to run:__
 ```sh
