@@ -1,5 +1,8 @@
 #zalohovaci script TeamSpeak serveru na Mega.nz
-datum=$(date +"%d_%B")
+datum=$(date +"%d-%B_%H-%M")
+
+#Prefix názvu souboru. Použijte například, pokud zálohujete více TeamSpeak3 serverů dohrmady. (jinak můžete nechat původní)
+prefix=TS3_
 
 #lokace složky TS serveru:
 serverloc=/your/path
@@ -9,7 +12,7 @@ email=email@adresa.cz
 heslo=moje-uzasne-heslo
 
 #složka, kam chcete na mega.nz ukládat svá data (vždy musí začínát částí /Root/)
-cesta=/Root/my/remote/path
+cesta=/Root/moje/krasna/cesta
 
 
 #POD TÍMTO ŘÁDKEM NIC NEUPRAVUJEME!!!!
@@ -21,15 +24,15 @@ sleep 5
 
 #vytvoreni 7zip archivu serveru
 echo "Archivuji TeamSpeak3 server"
-7z a -t7z /backup/$datum.7z $serverloc -m0=lzma2 -mx0 -aoa -mmt=on
+7z a -t7z /backup/$prefix$datum.7z $serverloc -m0=lzma2 -mx0 -aoa -mmt=on
 
 #Odeslání archviu na mega.nz
 echo "Odesilam archiv na mega.nz uloziste"
-megaput /backup/$datum.7z --reload --username=$email --password=$heslo  --path=$cesta --disable-previews
+megaput /backup/$prefix$datum.7z --reload --username=$email --password=$heslo  --path=$cesta --disable-previews
 
 #smazání archivu ze lokální disku
 echo "Mazu puzustale lokalni soubory"
-rm /backup/$datum.7z
+rm /backup/$prefix$datum.7z
 
 wget -q -N https://up.life-games.cz/files/endtext.txt
 cat endtext.txt
