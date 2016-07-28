@@ -23,5 +23,5 @@ For you is the file ts_backupEN.sh.. (one with CZ on the end is in Czech languag
  
 If you want to contact me, contact places are in the script.
 
- ## Installation 
+## Installation 
 You can find it on [Wiki page](https://github.com/DJIronic/mega-ts-backup/wiki).
