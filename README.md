@@ -11,8 +11,8 @@ Script je povoleno jakkoliv upravovat, jen  prosím zachovejte části s příka
 
 Kontakt v případě potřeby podpory je uveden ve scriptu.
 
-### Instalace:
-##### Ke běhu je potřeba nástroj megatools! Více o nástroji a návod na jeho instalaci najdete [ZDE](https://github.com/megous/megatools).
+# Instalace:
+## Ke běhu je potřeba nástroj megatools! Více o nástroji a návod na jeho instalaci najdete [ZDE](https://github.com/megous/megatools).
 
 __Instalace balíčku 7-zip:__
 ```sh
@@ -37,7 +37,7 @@ __spuštění scriptu:__
 ```sh
 ./ts_backupCZ.sh
 ```
-### Hotovo! Script doporučuji nastavit do CRONa. Pokud si s tím nevíte rady, kontaktujte mě na místech uvedených ve scriptu.
+## Hotovo! Script doporučuji nastavit do CRONa. Pokud si s tím nevíte rady, kontaktujte mě na místech uvedených ve scriptu.
 
 ## EN:
 This script is for making backups of your TS3 server to mega.nz storage.
@@ -47,8 +47,8 @@ For you is the file ts_backupEN.sh.. (one with CZ on the end is in Czech languag
  
 If you want to contact me, contact places are in the script.
 
- ### Installation 
- #### Script require megatools package! More info, download and installation tutorial is [HERE](https://github.com/megous/megatools).
+ # Installation 
+ ## Script require megatools package! More info, download and installation tutorial is [HERE](https://github.com/megous/megatools).
  
 __7-zip installation (also required package)__
 ```sh
@@ -73,5 +73,5 @@ __start the script:__
 ```sh
 ./ts_backupCZ.sh
 ```
- ### Done! I strongly recommend to use this script min CRON. If you need help with it, use Google or ask me on contacts listed in script. Thanks
+ ## Done! I strongly recommend to use this script min CRON. If you need help with it, use Google or ask me on contacts listed in script. Thanks
  
