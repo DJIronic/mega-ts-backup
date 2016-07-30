@@ -28,7 +28,7 @@ You can find it on [Wiki page](https://github.com/DJIronic/mega-ts-backup/wiki).
 
 ###Licence:
 This tool is using:
-Megatools were written by Ondrej Jirman <megous@megous.com>, 2014
+Megatools by Ondrej Jirman <megous@megous.com>, 2014
 Webiste: http://megatools.megous.com
 
 Megatools are licensed under GPLv2 with OpenSSL exemption, see LICENSE
