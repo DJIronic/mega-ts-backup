@@ -25,3 +25,17 @@ If you want to contact me, contact places are in the script.
 
 ## Installation 
 You can find it on [Wiki page](https://github.com/DJIronic/mega-ts-backup/wiki).
+
+###Licence:
+This tool is using:
+Megatools were written by Ondrej Jirman <megous@megous.com>, 2014
+Webiste: http://megatools.megous.com
+
+Megatools are licensed under GPLv2 with OpenSSL exemption, see LICENSE
+file for details.
+
+This product includes software developed by the OpenSSL Project for use
+in the OpenSSL Toolkit. (http://www.openssl.org/)
+
+Consider donation for both of them.
+
