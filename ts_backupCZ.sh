@@ -3,9 +3,15 @@ datum=$(date +"%d-%B_%H-%M")
 
 #Prefix názvu souboru. Použijte například, pokud zálohujete více TeamSpeak3 serverů dohrmady. (jinak můžete nechat původní)
 prefix=TS3_
+MySQLprefix=MySQL_
 
 #lokace složky TS serveru:
 serverloc=/your/path
+
+#MySQL nastavení
+uzivatel=username
+heslo=hesliicko
+databaze=uzasna_databaze
 
 #Vase přihlašovací údaje na Mega.nz
 email=email@adresa.cz
@@ -20,22 +26,27 @@ cesta=/Root/moje/krasna/cesta
 wget -q -N https://up.life-games.cz/files/load.txt
 cat load.txt
 sleep 5
-
-
+mkdir -p /backup
+# Export MySQL a přidání do archivu
+echo "Exportovani a archivovani databaze."
+mysqldump -u $uzivatel -p$heslo $databaze > /home/backup/mysql.sql
+7z a -t7z /backup/$MySQLprefix$datum.7z /home/backup/mysql.sql -m0=lzma2 -mx0 -aoa -mmt=on
 #vytvoreni 7zip archivu serveru
 echo "Archivuji TeamSpeak3 server"
 7z a -t7z /backup/$prefix$datum.7z $serverloc -m0=lzma2 -mx0 -aoa -mmt=on
 
 #Odeslání archviu na mega.nz
 echo "Odesilam archiv na mega.nz uloziste"
-megaput /backup/$prefix$datum.7z --reload --username=$email --password=$heslo  --path=$cesta --disable-previews
+/usr/bin/megaput /backup/$prefix$datum.7z --reload --username=$email --password=$heslo  --path=$cesta --disable-previews
+/usr/bin/megaput /backup/$MySQLprefix$datum.7z --reload --username=$email --password=$heslo  --path=$cesta --disable-previews
 
 #smazání archivu ze lokální disku
 echo "Mazu puzustale lokalni soubory"
 rm /backup/$prefix$datum.7z
+rm /backup/$MySQLprefix$datum.7z
 
 wget -q -N https://up.life-games.cz/files/endtext.txt
 cat endtext.txt
 
-#Děkuji, že využíváte můj script. Pro jakékoliv dotazy či podporu mě kontaktujte na FB stránce https://fb.com/lifegamescz nebo na E-Mail: dj@life-games.com/lifegamescz
+#Děkuji, že využíváte můj script. Pro jakékoliv dotazy či podporu mě kontaktujte na FB stránce https://fb.com/lifegamescz nebo na E-Mail: dj@life-games.com
 #Pokud se vám moje práce líbila, zvažte dotaci na můj PayPal atack9@gmail.com, podpoříte tím běh projektu LiFe-Games.cz a další vývoj tohoto scriptu. Děkuji
